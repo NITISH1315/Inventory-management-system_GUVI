@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Inventory Management System</h2>
+
+<form action="InventoryServlet" method="post">
+    <input type="hidden" name="action" value="add">
+    <input type="number" name="id" placeholder="Product ID" required>
+    <input type="text" name="name" placeholder="Product Name" required>
+    <input type="number" name="quantity" placeholder="Quantity" required>
+    <input type="number" name="price" placeholder="Price" required>
+    <button>Add Product</button>
+</form>
+
+<form action="InventoryServlet" method="post">
+    <input type="hidden" name="action" value="update">
+    <input type="number" name="id" placeholder="Product ID" required>
+    <input type="number" name="quantity" placeholder="New Quantity" required>
+    <input type="number" name="price" placeholder="New Price" required>
+    <button>Update Product</button>
+</form>
+
+<form action="InventoryServlet" method="post">
+    <input type="hidden" name="action" value="delete">
+    <input type="number" name="id" placeholder="Product ID" required>
+    <button>Delete Product</button>
+</form>
+
+<form action="InventoryServlet" method="post">
+    <input type="hidden" name="action" value="view">
+    <button>View Inventory</button>
+</form>
+
+</body>
+</html>
